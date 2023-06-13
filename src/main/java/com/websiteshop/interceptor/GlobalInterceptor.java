@@ -1,3 +1,4 @@
+/*
 package com.websiteshop.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,3 +24,4 @@ public class GlobalInterceptor implements HandlerInterceptor{
 		request.setAttribute("cates", categoryService.findAll());
 	}
 }
+*/

@@ -47,7 +47,7 @@
 				<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 					<li><a class="dropdown-item" th:href="@{|/admin/accounts/info/${#request.remoteUser}|}">
 						<i class="fa-solid fa-circle-user"></i> Thông tin cá nhân</a></li>
-					<li><a class="dropdown-item" th:href="@{/forgot_password}">Đổi mật khẩu</a></li>
+					<!--<li><a class="dropdown-item" th:href="@{/forgot_password}">Đổi mật khẩu</a></li>-->
 					<li><a class="dropdown-item" th:href="@{/admin/accounts/SendEmail}">Gửi mail</a></li>
 					<li><a class="dropdown-item" th:href="@{#}">Cài đặt</a></li>
 					<li><hr class="dropdown-divider"></li>
@@ -122,7 +122,7 @@
 							</nav>
 						</div>
 							<div>
-								<a class="nav-link" th:href="@{/admin/orders}">Quản lý đơn hàng</a> 
+								<a class="nav-link" th:href="@{/admin/orders/list}">Quản lý đơn hàng</a>
 							</div>
 						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
 							data-bs-target="#collapseFm" aria-expanded="false"

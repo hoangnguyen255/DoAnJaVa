@@ -22,7 +22,7 @@ import com.websiteshop.service.FavoriteService;
 
 @Controller
 @RequestMapping("favorite")
-public class FavoriteController {
+public class 	FavoriteController {
 	@Autowired
 	FavoriteService favoriteService;
 

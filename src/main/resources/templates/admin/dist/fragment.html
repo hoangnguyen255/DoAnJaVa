@@ -50,8 +50,8 @@
 					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 						<li><a class="dropdown-item" th:href="@{|/admin/accounts/info/${#request.remoteUser}|}">
 							<i class="fa-solid fa-circle-user"></i> Thông tin cá nhân</a></li>
-						<li><a class="dropdown-item" th:href="@{/forgot_password}">
-							<i class="fa-solid fa-pen-nib"></i> Đổi mật khẩu</a></li>
+						<!--<li><a class="dropdown-item" th:href="@{/forgot_password}">
+							<i class="fa-solid fa-pen-nib"></i> Đổi mật khẩu</a></li>-->
 						<li><a class="dropdown-item" th:href="@{/admin/accounts/SendEmail}">
 							<i class="fa-regular fa-paper-plane"></i> Gửi mail</a></li>
 					<!--	<li><a class="dropdown-item" th:href="@{#}">
@@ -73,7 +73,7 @@
 						<a class="nav-link" th:href="@{/}">
 							<div class="sb-nav-link-icon">
 								<i class="fa-solid fa-house"></i>
-							</div> Shop Home
+							</div> DiDongViet Home
 						</a>
 						<div class="sb-sidenav-menu-heading">Giao diện</div>
 							<nav>
@@ -116,12 +116,14 @@
 						<div>
 							<a class="nav-link" th:href="@{/admin/orders/list}"><i class="fas fa-columns"></i>&ensp;Quản lý đơn hàng</a> 
 							</div>
-							<!-- <nav>
-								<a class="nav-link" th:href="@{/admin/comments}"><i class="fas fa-columns"></i>&ensp;Danh sách bình luận</a> 
-							</nav> -->
-							<nav>
+								<nav>
+								<a class="nav-link" th:href="@{/admin/comments}"><i class="fas fa-columns"></i>&ensp;Danh sách bình luận</a>
+									<a class="nav-link" th:href="@{/admin/comments/add}">Thêm bình luận</a>
+							</nav>
+
+						<!--	<nav>
 								<a class="nav-link" th:href="@{/admin/feedbacks}"><i class="fas fa-columns"></i>&ensp;Phản hồi hệ thống</a>
-							</nav>				
+							</nav>	-->
 						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
 							data-bs-target="#collapsePages" aria-expanded="false"
 							aria-controls="collapsePages">

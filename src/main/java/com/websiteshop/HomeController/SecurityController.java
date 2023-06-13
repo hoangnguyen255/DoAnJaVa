@@ -52,11 +52,6 @@ public class SecurityController {
         return "security/login-css";
     }
 
-    @RequestMapping("/security/forgotPassword")
-    public String forgot() {
-        return "/admin/dist/forgotPassword";
-    }
-
     @RequestMapping("/security/statitic")
     public String statitic() {
         return "/admin/dist/statitic";
