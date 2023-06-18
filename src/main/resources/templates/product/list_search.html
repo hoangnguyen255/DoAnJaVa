@@ -3,7 +3,7 @@
 	th:replace="~{/layout/index :: dynamic(~{::main})}">
 
 <body>
-    <main class="container-fluid ml-3">
+    <main class="container-fluid ml-3" style="margin-top: 15px">
         <div class="btn-group dropdown mb-2 mr-2">
 			<button type="button" class="btn btn-secondary" id="btn_search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fa-solid fa-filter"></i> Bộ lọc
@@ -359,9 +359,9 @@
 				<h4 style="color: #938484;">Có thể sản phẩm đã ngừng kinh doanh</h4>
 			</div>
 		</div>
-        <div class="row mb-4">		
-            <div th:each="item: ${item}" class="col-sm-2">
-                <div class="card">
+		<div class="row" style="margin-left: 30px">
+            <div th:each="item: ${item}" class="col-sm-2dot4">
+                <div class="card" style="width: 275px">
 					<div class="card-body list-item">
 						<div class="gif">
 							<img th:src="@{|/assets/images/${item.hotSale}|}" th:attr="style=${item.hotSale == 'pngegg.png' ? 'opacity: 0' : ''}" />
@@ -370,11 +370,11 @@
 							<img class="imgindex" th:src="@{|/assets/images/${item.image1}|}">
 						</a>
 					</div>
-					<div class="card-footer">
-						<a th:href="@{|/product/detail/${item.productId}|}" class="card-title">[(${item.name})] [(${item.RAM})]</a>
+					<div class="card-footer" style="height: 163px;">
+						<a th:href="@{|/product/detail/${item.productId}|}" class="card-title" style="font-size: larger;">[(${item.name})] [(${item.RAM})]</a>
 						<div class="card-bottom">
 							<div>
-								<span class="price">[[${#numbers.formatInteger(item.unitPrice, 0,
+								<span class="price" style="display: block;">[[${#numbers.formatInteger(item.unitPrice, 0,
 									'POINT')}]] <sup>đ</sup>
 								</span>
 							</div>
@@ -405,9 +405,9 @@
 		<!-- **************************************************************** -->
 			<br>
         <h5>Xem thêm các sản phẩm khác:</h5>
-        <div class="row">
-            <div th:each="item, itemIndex: ${items}" th:if="${itemIndex.index} &lt; 12" class="col-sm-2">
-                <div class="card">
+        <div class="row" style="margin-left: 30px">
+            <div th:each="item, itemIndex: ${items}" th:if="${itemIndex.index} &lt; 12" class="col-sm-2dot4">
+                <div class="card" style="width: 275px">
                     <div class="card-body list-item">
                         <div class="gif">
 							<img th:src="@{|/assets/images/${item.hotSale}|}" th:attr="style=${item.hotSale == 'pngegg.png' ? 'opacity: 0' : ''}" />
@@ -416,11 +416,11 @@
                             <img class="imgindex" th:src="@{|/assets/images/${item.image1}|}">
                         </a>
                     </div>
-                    <div class="card-footer">
-                        <a th:href="@{|/product/detail/${item.productId}|}" class="card-title">[(${item.name})] [(${item.RAM})]</a>
+                    <div class="card-footer" style="height: 163px;">
+                        <a th:href="@{|/product/detail/${item.productId}|}" class="card-title" style="font-size: larger;">[(${item.name})] [(${item.RAM})]</a>
                         <div class="card-bottom">
                             <div>
-                                <span class="price">[[${#numbers.formatInteger(item.unitPrice, 0, 'POINT')}]] <sup>đ</sup></span>
+                                <span class="price" style="display: block;">[[${#numbers.formatInteger(item.unitPrice, 0, 'POINT')}]] <sup>đ</sup></span>
                             </div>
                             <div>
                                 <span class="old_price">[[${#numbers.formatInteger(item.oldPrice, 0, 'POINT')}]] <sup>đ</sup></span>

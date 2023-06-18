@@ -111,9 +111,9 @@
 
         <!-- **************************************************************** -->
         <h5>Phụ kiện thường mua cùng: <a class="link_all-item" th:href="@{/product/list?cid=8}">(Xem tất cả sản phẩm)</a></h4>
-            <div class="row ml-2">
-                <div th:each="item: ${phukien}" class="col-sm-2">
-                    <div class="card">
+            <div class="row">
+                <div th:each="item: ${phukien}" class="col-sm-2dot4">
+                    <div class="card" style="width: 275px">
                         <div class="card-body list-item">
                             <div class="gif">
                                 <img th:src="@{|/assets/images/${item.hotSale}|}" th:attr="style=${item.hotSale == 'pngegg.png' ? 'opacity: 0' : ''}" />
@@ -122,12 +122,12 @@
                                 <img class="imgindex" th:src="@{|/assets/images/${item.image1}|}">
                             </a>
                         </div>
-                        <div class="card-footer">
-                            <a th:href="@{|/product/detail/${item.productId}|}" class="card-title">[(${item.name})]
+                        <div class="card-footer" style="height: 163px;">
+                            <a th:href="@{|/product/detail/${item.productId}|}" class="card-title" style="font-size: larger;">[(${item.name})]
                                 [(${item.RAM})]</a>
                             <div class="card-bottom">
                                 <div>
-                                    <span class="price">[[${#numbers.formatInteger(item.unitPrice, 0,
+                                    <span class="price" style="display: block;">[[${#numbers.formatInteger(item.unitPrice, 0,
                                         'POINT')}]] <sup>đ</sup>
                                     </span>
                                 </div>
@@ -155,9 +155,9 @@
             </div>
             <!-- ******************************** -->
             <h5 class="mt-3"><b>Xem thêm sản phẩm cùng loại: </b></h5>
-            <div class="row mb-4 ml-2">
-                <div th:each="item: *{category.products}" class="col-sm-2">
-                    <div class="card">
+            <div class="row">
+                <div th:each="item: *{category.products}" class="col-sm-2dot4">
+                    <div class="card" style="width: 275px">
                         <div class="card-body list-item">
                             <div class="gif">
                                 <img th:src="@{|/assets/images/${item.hotSale}|}" th:attr="style=${item.hotSale == 'pngegg.png' ? 'opacity: 0' : ''}" />
@@ -166,12 +166,12 @@
                                 <img class="imgindex" th:src="@{|/assets/images/${item.image1}|}">
                             </a>
                         </div>
-                        <div class="card-footer">
-                            <a th:href="@{|/product/detail/${item.productId}|}" class="card-title">[(${item.name})]
+                        <div class="card-footer" style="height: 163px;">
+                            <a th:href="@{|/product/detail/${item.productId}|}" class="card-title" style="font-size: larger;">[(${item.name})]
                                 [(${item.RAM})]</a>
                             <div class="card-bottom">
                                 <div>
-                                    <span class="price">[[${#numbers.formatInteger(item.unitPrice, 0,
+                                    <span class="price" style="display: block;">[[${#numbers.formatInteger(item.unitPrice, 0,
                                         'POINT')}]] <sup>đ</sup>
                                     </span>
                                 </div>
@@ -231,9 +231,9 @@
                     </div>
                 </a>
             </div>
-            <div class="row ml-2">
-                <div th:each="item, itemIndex: ${items}" th:if="${itemIndex.index} &lt; 6" class="col-sm-2">
-                    <div class="card">
+            <div class="row">
+                <div th:each="item, itemIndex: ${items}" th:if="${itemIndex.index} &lt; 6" class="col-sm-2dot4">
+                    <div class="card" style="width: 275px">
                         <div class="card-body list-item">
                             <div class="gif">
                                 <img th:src="@{|/assets/images/${item.hotSale}|}" th:attr="style=${item.hotSale == 'pngegg.png' ? 'opacity: 0' : ''}" />
@@ -242,12 +242,12 @@
                                 <img class="imgindex" th:src="@{|/assets/images/${item.image1}|}">
                             </a>
                         </div>
-                        <div class="card-footer">
-                            <a th:href="@{|/product/detail/${item.productId}|}" class="card-title">[(${item.name})]
+                        <div class="card-footer" style="height: 163px;">
+                            <a th:href="@{|/product/detail/${item.productId}|}" class="card-title" style="font-size: larger;">[(${item.name})]
                                 [(${item.RAM})]</a>
                             <div class="card-bottom">
                                 <div>
-                                    <span class="price">[[${#numbers.formatInteger(item.unitPrice, 0, 'POINT')}]]
+                                    <span class="price" style="display: block;">[[${#numbers.formatInteger(item.unitPrice, 0, 'POINT')}]]
                                         <sup>đ</sup></span>
                                 </div>
                                 <div>

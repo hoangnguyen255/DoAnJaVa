@@ -14,7 +14,7 @@ app.controller("shopping-cart-ctrl", function ($scope, $http) {
                 alert("Đã thêm vào giỏ!");
             } else {
                 $http.get(`/rest/products/${id}`).then(resp => {
-                    resp.data.qty = 1;
+                    resp.data.qty = 0;
                     this.items.push(resp.data);
                     this.saveToLocalStorage();
                 })

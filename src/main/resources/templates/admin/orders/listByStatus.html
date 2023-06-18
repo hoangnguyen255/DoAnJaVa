@@ -3,23 +3,30 @@
 	th:replace="~{/admin/dist/fragment :: dynamic(~{::main})}">
 <body>
 	<main class="container-fluid ml-3">
+		<div class="card">
+		<div class="card-header">
+			<h3>
+				<i class="fa-solid fa-list"></i> Danh sách đơn hàng
+			</h3>
+		</div>
+		</div>
         <div class="row mt-2">
             <div class="col">
                 <div class="status_cart">
                     <a th:href=@{/admin/orders/list}><label id="btn_search"
-                        class="status_cart_item"> [[#{OH.all}]] ([[${totalSize}]])</label></a> 
+                        class="status_cart_item"> Tất cả ([[${totalSize}]])</label></a>
                     <a th:href=@{/admin/orders/confirmation}><label id="btn_search"
                         class="status_cart_item">
-                        <i class="fa-solid fa-circle-check"></i> [[#{OH.confirm}]] [[${totalSizeStatus_confirmation}]]</label></a> 
+                        <i class="fa-solid fa-circle-check"></i> Chờ xác nhận ([[${totalSizeStatus_confirmation}]])</label></a>
                     <a th:href=@{/admin/orders/transported}><label id="btn_search"
                         class="status_cart_item"><i class="fa-solid fa-truck"></i>
-                        [[#{OH.transported}]] [[${totalSizeStatus_transported}]]</label></a> 
+                        Chờ vận chuyển ([[${totalSizeStatus_transported}]])</label></a>
                     <a th:href=@{/admin/orders/delivered}><label id="btn_search"
                         class="status_cart_item"><i class="fa-solid fa-face-smile"></i>
-                        [[#{OH.delivered}]] [[${totalSizeStatus_delivered}]]</label></a> 
+                        Đã giao hàng ([[${totalSizeStatus_delivered}]])</label></a>
                     <a th:href=@{/admin/orders/cancel}><label id="btn_search"
                         class="status_cart_item"><i class="fa-solid fa-road"></i>
-                        [[#{OH.cancel}]] [[${totalSizeStatus_cancel}]]</label></a>
+                        Đã hủy ([[${totalSizeStatus_cancel}]])</label></a>
                 </div>
             </div>
         </div>

@@ -259,10 +259,16 @@ nav ul li a label {
 }
 
 .price {
-  color: #f57224;
-  display:inline;
-  font-size:18px;
-  line-height:22px;
+  color: white;
+
+      font-size: 18px;
+      line-height: 22px;
+      background: red;
+      width: 127px;
+      height: 24px;
+      text-align: center;
+      position: relative;
+      border-radius: 15px;
 }
 .old_price{
   text-decoration: line-through;
@@ -288,6 +294,7 @@ nav ul li a label {
 	width: 40px;
   height: 40px;
   z-index: 2;
+  margin-right: 10px;
 }
 
 .slide{
@@ -295,7 +302,7 @@ nav ul li a label {
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 180px;
+  height: 245px;
 }
 .slide-left{
   width: 100%;
@@ -307,7 +314,7 @@ nav ul li a label {
 }
 .m{
   width: 100%;
-  height: 90px;
+  height: 120px;
 }
 .img-title{
 	width: 100%;
@@ -657,7 +664,56 @@ nav ul li a label {
   text-align: center;
   width: 20px;
 }
-
+.col-2dot4, // extra small
+.col-sm-2dot4, // small
+.col-md-2dot4, // medium
+.col-lg-2dot4, // large
+.col-xl-2dot4 { // extra large
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-2dot4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+@media (min-width: 540px) {
+    .col-sm-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+        height: 370px;
+    }
+}
+@media (min-width: 720px) {
+    .col-md-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (min-width: 960px) {
+    .col-lg-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (min-width: 1140px) {
+    .col-xl-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
 
 
 
